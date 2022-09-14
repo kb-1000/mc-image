@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="substgen" type="JetRunConfigurationType">
+    <option name="MAIN_CLASS_NAME" value="de.kb1000.mcimage.substgen.Main" />
+    <module name="mc-image-substgen" />
+    <shortenClasspath name="NONE" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

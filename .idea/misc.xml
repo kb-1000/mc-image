@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EntryPointsManager">
+    <entry_points version="2.0">
+      <entry_point TYPE="method" FQNAME="de.kb1000.mcimage.substgen.GenerateJNIInvokerSubstitutionKt void main()" />
+      <entry_point TYPE="method" FQNAME="de.kb1000.mcimage.substgen.Main void main()" />
+    </entry_points>
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.AnnotateOriginal" />
+      <item index="1" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.AutomaticFeature" />
+      <item index="2" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.Delete" />
+      <item index="3" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.InjectAccessors" />
+      <item index="4" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.RecomputeFieldValue" />
+      <item index="5" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.Substitute" />
+      <item index="6" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.TargetClass" />
+    </list>
+    <pattern value="org.graalvm.compiler.nodes.graphbuilderconf.GeneratedPluginFactory" hierarchically="true" />
+    <writeAnnotations>
+      <writeAnnotation name="com.oracle.svm.core.annotate.RecomputeFieldValue" />
+      <writeAnnotation name="com.oracle.svm.core.annotate.InjectAccessors" />
+    </writeAnnotations>
+  </component>
+  <component name="KotlinMultiplatform">
+    <allAvailableExecutables />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="GraalVM 17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

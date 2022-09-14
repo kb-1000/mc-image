@@ -1,0 +1,32 @@
+<component name="libraryTable">
+  <library name="graalvm.nativeimage.svm" type="repository">
+    <properties maven-id="org.graalvm.nativeimage:svm:22.2.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/svm/22.2.0/svm-22.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/sdk/graal-sdk/22.2.0/graal-sdk-22.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/objectfile/22.2.0/objectfile-22.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/pointsto/22.2.0/pointsto-22.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/compiler/compiler/22.2.0/compiler-22.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/truffle/truffle-api/22.2.0/truffle-api-22.2.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/native-image-base/22.2.0/native-image-base-22.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/svm/22.2.0/svm-22.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/sdk/graal-sdk/22.2.0/graal-sdk-22.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/objectfile/22.2.0/objectfile-22.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/pointsto/22.2.0/pointsto-22.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/compiler/compiler/22.2.0/compiler-22.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/truffle/truffle-api/22.2.0/truffle-api-22.2.0-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/native-image-base/22.2.0/native-image-base-22.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/svm/22.2.0/svm-22.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/sdk/graal-sdk/22.2.0/graal-sdk-22.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/objectfile/22.2.0/objectfile-22.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/pointsto/22.2.0/pointsto-22.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/compiler/compiler/22.2.0/compiler-22.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/truffle/truffle-api/22.2.0/truffle-api-22.2.0-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/graalvm/nativeimage/native-image-base/22.2.0/native-image-base-22.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

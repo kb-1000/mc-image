@@ -1,0 +1,24 @@
+[
+    {
+        "name": "java.lang.Integer",
+        "methods": [
+            {
+                "name": "valueOf",
+                "parameterTypes": [
+                    "java.lang.String"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "java.io.File",
+        "methods": [
+            {
+                "name": "<init>",
+                "parameterTypes": [
+                    "java.lang.String"
+                ]
+            }
+        ]
+    }
+]

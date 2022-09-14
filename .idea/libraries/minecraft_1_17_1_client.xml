@@ -1,0 +1,72 @@
+<component name="libraryTable">
+  <library name="minecraft-1.17.1-client">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/org/lwjgl/lwjgl-glfw/3.2.2/lwjgl-glfw-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/lwjgl/lwjgl-jemalloc/3.2.2/lwjgl-jemalloc-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/lwjgl/lwjgl-openal/3.2.2/lwjgl-openal-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/lwjgl/lwjgl-opengl/3.2.2/lwjgl-opengl-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/lwjgl/lwjgl-stb/3.2.2/lwjgl-stb-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/lwjgl/lwjgl-tinyfd/3.2.2/lwjgl-tinyfd-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/lwjgl/lwjgl/3.2.2/lwjgl-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/blocklist/1.0.5/blocklist-1.0.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/patchy/2.1.6/patchy-2.1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/github/oshi/oshi-core/5.7.5/oshi-core-5.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/net/java/dev/jna/jna/5.8.0/jna-5.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/net/java/dev/jna/jna-platform/5.8.0/jna-platform-5.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/slf4j/slf4j-api/1.8.0-beta4/slf4j-api-1.8.0-beta4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/apache/logging/log4j/log4j-slf4j18-impl/2.14.1/log4j-slf4j18-impl-2.14.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/ibm/icu/icu4j/66.1/icu4j-66.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/javabridge/1.1.23/javabridge-1.1.23.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/net/sf/jopt-simple/jopt-simple/5.0.3/jopt-simple-5.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/io/netty/netty-all/4.1.25.Final/netty-all-4.1.25.Final.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/google/guava/guava/21.0/guava-21.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/commons-io/commons-io/2.5/commons-io-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/commons-codec/commons-codec/1.10/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/brigadier/1.0.18/brigadier-1.0.18.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/datafixerupper/4.0.26/datafixerupper-4.0.26.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/authlib/2.3.31/authlib-2.3.31.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/apache/commons/commons-compress/1.8.1/commons-compress-1.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/apache/httpcomponents/httpclient/4.3.3/httpclient-4.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/it/unimi/dsi/fastutil/8.2.1/fastutil-8.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/apache/logging/log4j/log4j-api/2.14.1/log4j-api-2.14.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/org/apache/logging/log4j/log4j-core/2.14.1/log4j-core-2.14.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/text2speech/1.11.3/text2speech-1.11.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/minecraft/1.17.1/minecraft-1.17.1-client.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/log4j-core-2.14.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/log4j-api-2.14.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/jopt-simple-5.0.3-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lwjgl-3.2.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lwjgl-opengl-3.2.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lwjgl-stb-3.2.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lwjgl-glfw-3.2.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lwjgl-openal-3.2.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lwjgl-tinyfd-3.2.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/jna-platform-5.8.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/lwjgl-jemalloc-3.2.2-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-lang3-3.5-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/icu4j-66.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/slf4j-api-1.8.0-beta4-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-logging-1.1.3-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-io-2.5-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-compress-1.8.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-codec-1.10-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/fastutil-8.2.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/guava-21.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/oshi-core-5.7.5-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/netty-all-4.1.25.Final-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/httpclient-4.3.3-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/gson-2.8.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/datafixerupper-4.0.26-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/jna-5.8.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/log4j-slf4j18-impl-2.14.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/httpcore-4.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

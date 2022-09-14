@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hashed">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/hashed-1.17.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

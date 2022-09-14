@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Agent-Class: de.kb1000.mcimage.agent.PreMain
+Premain-Class: de.kb1000.mcimage.agent.PreMain
+

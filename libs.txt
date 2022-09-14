@@ -1,0 +1,2 @@
+https://build.lwjgl.org/release/3.2.2/linux/x64/libdynload_s.a
+https://build.lwjgl.org/release/3.2.2/linux/x64/libdyncallback_s.a

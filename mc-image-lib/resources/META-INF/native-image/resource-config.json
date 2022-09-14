@@ -1,0 +1,21 @@
+{
+    "resources": {
+        "includes": [
+            {
+                "pattern": "\\Qoshi.architecture.properties\\E",
+                "$comment": "TODO: move to build time"
+            },
+            {
+                "pattern": "\\Qversion.json\\E",
+                "$comment": "TODO: move to build time"
+            },
+            {
+                "pattern": "\\Qyggdrasil_session_pubkey.der\\E",
+                "$comment": "TODO: move to build time"
+            },
+            {
+                "pattern": "(assets|data)/.*"
+            }
+        ]
+    }
+}

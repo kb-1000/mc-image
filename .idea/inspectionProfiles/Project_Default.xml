@@ -1,0 +1,26 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="EmptyMethod" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="EXCLUDE_ANNOS">
+        <value>
+          <list size="2">
+            <item index="0" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.Delete" />
+            <item index="1" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.Substitute" />
+          </list>
+        </value>
+      </option>
+      <option name="commentsAreContent" value="false" />
+    </inspection_tool>
+    <inspection_tool class="FieldCanBeLocal" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="EXCLUDE_ANNOS">
+        <value>
+          <list size="1">
+            <item index="0" class="java.lang.String" itemvalue="com.oracle.svm.core.annotate.Alias" />
+          </list>
+        </value>
+      </option>
+      <option name="IGNORE_FIELDS_USED_IN_MULTIPLE_METHODS" value="true" />
+    </inspection_tool>
+  </profile>
+</component>

@@ -1,0 +1,47 @@
+<component name="libraryTable">
+  <library name="glassfish.jaxb.xjc" type="repository">
+    <properties maven-id="org.glassfish.jaxb:jaxb-xjc:3.0.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-xjc/3.0.2/jaxb-xjc-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-core/3.0.2/jaxb-core-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/txw2/3.0.2/txw2-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/4.0.1/istack-commons-runtime-4.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/xsom/3.0.2/xsom-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/external/relaxng-datatype/3.0.2/relaxng-datatype-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/codemodel/3.0.2/codemodel-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/external/rngom/3.0.2/rngom-3.0.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/dtd-parser/dtd-parser/1.4.5/dtd-parser-1.4.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-tools/4.0.1/istack-commons-tools-4.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-xjc/3.0.2/jaxb-xjc-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-core/3.0.2/jaxb-core-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/txw2/3.0.2/txw2-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/4.0.1/istack-commons-runtime-4.0.1-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/xsom/3.0.2/xsom-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/external/relaxng-datatype/3.0.2/relaxng-datatype-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/codemodel/3.0.2/codemodel-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/external/rngom/3.0.2/rngom-3.0.2-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/dtd-parser/dtd-parser/1.4.5/dtd-parser-1.4.5-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-tools/4.0.1/istack-commons-tools-4.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-xjc/3.0.2/jaxb-xjc-3.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/jaxb-core/3.0.2/jaxb-core-3.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/jakarta/xml/bind/jakarta.xml.bind-api/3.0.1/jakarta.xml.bind-api-3.0.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/activation/jakarta.activation/2.0.1/jakarta.activation-2.0.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/txw2/3.0.2/txw2-3.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-runtime/4.0.1/istack-commons-runtime-4.0.1-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/xsom/3.0.2/xsom-3.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/external/relaxng-datatype/3.0.2/relaxng-datatype-3.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/glassfish/jaxb/codemodel/3.0.2/codemodel-3.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/bind/external/rngom/3.0.2/rngom-3.0.2-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/xml/dtd-parser/dtd-parser/1.4.5/dtd-parser-1.4.5-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/sun/istack/istack-commons-tools/4.0.1/istack-commons-tools-4.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
