@@ -28,8 +28,8 @@ public class AnnotationSubstitutionProcessorFixTransformer implements ClassFileT
             classReader.accept(new ClassVisitor(ASM8, classWriter) {
                 @Override
                 public MethodVisitor visitMethod(int access, String name, String descriptor, String signature, String[] exceptions) {
-                    MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
-                    if (mv != null && name.equals("handleFieldInAliasClass") && descriptor.equals("(Ljava/lang/reflect/Field;Ljava/lang/Class;)V")) {
+                    MethodVisitor mv_ = super.visitMethod(access, name, descriptor, signature, exceptions);
+                    if (mv_ != null && name.equals("handleFieldInAliasClass") && descriptor.equals("(Ljava/lang/reflect/Field;Ljava/lang/Class;)V")) {
                         return new MethodNode(ASM8) {
                             @Override
                             public void visitEnd() {
@@ -47,11 +47,11 @@ public class AnnotationSubstitutionProcessorFixTransformer implements ClassFileT
                                     insn = insn.getPrevious();
                                 instructions.insertBefore(insn, new VarInsnNode(ALOAD, localVariables.stream().filter(local -> local.name.equals("computedAlias")).toArray(LocalVariableNode[]::new)[0].index));
                                 instructions.set(insn, new MethodInsnNode(INVOKESTATIC, Type.getInternalName(Hooks.class), "equalsAnnotationSubstitutionProcessorOriginalField", "(Ljdk/vm/ci/meta/ResolvedJavaField;Ljdk/vm/ci/meta/ResolvedJavaField;Ljdk/vm/ci/meta/ResolvedJavaField;)Z", false));
-                                accept(mv);
+                                accept(mv_);
                             }
                         };
                     }
-                    return mv;
+                    return mv_;
                 }
             }, 0);
             return classWriter.toByteArray();

@@ -50,6 +50,9 @@ def main():
         download(session,
                  libraries / "com" / "mojang" / "minecraft" / mc_version / f"minecraft-{mc_version}-client.jar",
                  version["downloads"]["client"])
+        download(session,
+                 libraries / "com" / "mojang" / "minecraft" / mc_version / f"minecraft-{mc_version}-server.jar",
+                 version["downloads"]["server"])
         for library in version["libraries"]:
             download(session, libraries / library["downloads"]["artifact"]["path"], library["downloads"]["artifact"])
             if "classifiers" in library["downloads"] and "natives-linux" in library["downloads"]["classifiers"]:
@@ -61,6 +64,7 @@ def main():
             with session.get(f"https://maven.quiltmc.org/repository/release/org/quiltmc/hashed/{mc_version}/hashed-{mc_version}.jar") as resp:
                 with open(hashed, "wb") as fp:
                     fp.write(resp.content)
+
 
         os.makedirs(natives, exist_ok=True)
 
