@@ -14,4 +14,7 @@ import com.oracle.svm.core.annotate.TargetClass;
 @TargetClass(className = "java.io.ObjectInputStream")
 @Delete
 final class Target_java_io_ObjectInputStream {
+    @TargetClass(className = "java.io.ObjectInputStream", innerClass = "GetField")
+    @Delete
+    static final class Target_GetField {}
 }

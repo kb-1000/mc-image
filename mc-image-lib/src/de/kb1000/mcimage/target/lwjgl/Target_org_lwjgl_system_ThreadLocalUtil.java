@@ -10,12 +10,12 @@ package de.kb1000.mcimage.target.lwjgl;
 
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import org.lwjgl.PointerBuffer;
-import org.lwjgl.system.ThreadLocalUtil;
 
 import javax.annotation.Nullable;
 
-@TargetClass(ThreadLocalUtil.class)
+@TargetClass(className = "org.lwjgl.system.ThreadLocalUtil", onlyWith = Environment.ClientOnly.class)
 @Substitute
 final class Target_org_lwjgl_system_ThreadLocalUtil {
     @Substitute

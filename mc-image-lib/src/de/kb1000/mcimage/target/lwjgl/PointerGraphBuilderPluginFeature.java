@@ -8,14 +8,23 @@
 
 package de.kb1000.mcimage.target.lwjgl;
 
+import com.oracle.svm.core.ParsingReason;
+import com.oracle.svm.core.annotate.AutomaticFeature;
 import com.oracle.svm.core.classinitialization.EnsureClassInitializedNode;
+import com.oracle.svm.core.graal.InternalFeature;
 import com.oracle.svm.core.util.VMError;
+import de.kb1000.mcimage.util.Environment;
 import jdk.vm.ci.meta.*;
+import org.graalvm.compiler.api.replacements.SnippetReflectionProvider;
 import org.graalvm.compiler.nodes.ConstantNode;
 import org.graalvm.compiler.nodes.ValueNode;
-import org.graalvm.compiler.nodes.graphbuilderconf.*;
+import org.graalvm.compiler.nodes.graphbuilderconf.GraphBuilderConfiguration;
+import org.graalvm.compiler.nodes.graphbuilderconf.GraphBuilderContext;
+import org.graalvm.compiler.nodes.graphbuilderconf.InvocationPlugin;
+import org.graalvm.compiler.nodes.graphbuilderconf.InvocationPlugins;
 import org.graalvm.compiler.nodes.java.NewInstanceNode;
 import org.graalvm.compiler.nodes.java.StoreFieldNode;
+import org.graalvm.compiler.phases.util.Providers;
 import org.lwjgl.system.Callback;
 import org.lwjgl.system.Pointer;
 import org.lwjgl.system.Struct;
@@ -24,10 +33,17 @@ import java.lang.reflect.Type;
 import java.nio.ByteBuffer;
 import java.util.Objects;
 
-public class PointerGraphBuilderPlugins implements GeneratedPluginFactory {
+@AutomaticFeature
+public class PointerGraphBuilderPluginFeature implements InternalFeature {
     @Override
-    public void registerPlugins(InvocationPlugins plugins, GeneratedPluginInjectionProvider injection) {
-        InvocationPlugins.Registration r = new InvocationPlugins.Registration(plugins, Pointer.Default.class);
+    public boolean isInConfiguration(IsInConfigurationAccess access) {
+        return !Environment.SERVER;
+    }
+
+    @Override
+    public void registerInvocationPlugins(Providers providers, SnippetReflectionProvider snippetReflection, GraphBuilderConfiguration.Plugins plugins, ParsingReason reason) {
+        InvocationPlugins invocationPlugins = plugins.getInvocationPlugins();
+        InvocationPlugins.Registration r = new InvocationPlugins.Registration(invocationPlugins, Pointer.Default.class);
         class PointerInvocationPlugin extends InvocationPlugin {
             public PointerInvocationPlugin(String name, Type... argumentTypes) {
                 super(name, argumentTypes);
@@ -82,7 +98,7 @@ public class PointerGraphBuilderPlugins implements GeneratedPluginFactory {
         };
         r.register(new PointerInvocationPlugin("wrap", Class.class, long.class, int.class));
         r.register(new PointerInvocationPlugin("wrap", Class.class, long.class, int.class, ByteBuffer.class));
-        r = new InvocationPlugins.Registration(plugins, Struct.class);
+        r = new InvocationPlugins.Registration(invocationPlugins, Struct.class);
         class StructInvocationPlugin extends InvocationPlugin {
 
             public StructInvocationPlugin(String name, Type... argumentTypes) {
@@ -129,7 +145,7 @@ public class PointerGraphBuilderPlugins implements GeneratedPluginFactory {
         };
         r.register(new StructInvocationPlugin("wrap", Class.class, long.class));
         r.register(new StructInvocationPlugin("wrap", Class.class, long.class, ByteBuffer.class));
-        r = new InvocationPlugins.Registration(plugins, Callback.class);
+        r = new InvocationPlugins.Registration(invocationPlugins, Callback.class);
         VMError.guarantee(!Pointer.BITS32, "Graal doesn't support 64-bit platforms");
         r.register(new InvocationPlugin("__stdcall", String.class) {
             @Override
@@ -140,4 +156,5 @@ public class PointerGraphBuilderPlugins implements GeneratedPluginFactory {
             }
         });
     }
+
 }

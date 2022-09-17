@@ -11,15 +11,15 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
-import org.lwjgl.opengl.GL;
+import de.kb1000.mcimage.util.Environment;
 import org.lwjgl.opengl.GLCapabilities;
 import org.lwjgl.system.FunctionProvider;
 
 import javax.annotation.Nullable;
 
-@TargetClass(GL.class)
+@TargetClass(className = "org.lwjgl.opengl.GL", onlyWith = Environment.ClientOnly.class)
 public final class Target_org_lwjgl_opengl_GL {
-    @TargetClass(className = "org.lwjgl.opengl.GL$ICD")
+    @TargetClass(className = "org.lwjgl.opengl.GL", innerClass = "ICD", onlyWith = Environment.ClientOnly.class)
     interface ICD {
         @Alias
         void set(@Nullable GLCapabilities caps);
@@ -29,7 +29,7 @@ public final class Target_org_lwjgl_opengl_GL {
         GLCapabilities get();
     }
 
-    @TargetClass(className = "org.lwjgl.opengl.GL$ICDStatic")
+    @TargetClass(className = "org.lwjgl.opengl.GL", innerClass = "ICDStatic", onlyWith = Environment.ClientOnly.class)
     static final class ICDStatic {
         @Alias
         @Nullable

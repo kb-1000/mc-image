@@ -6,6 +6,7 @@
 #  file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import hashlib
+import json
 import os
 import pathlib
 import platform
@@ -14,9 +15,10 @@ import zipfile
 import requests
 
 mc_version = "1.17.1"
-libraries = pathlib.Path("libraries")
-natives = pathlib.Path("natives")
 cwd = pathlib.Path("")
+assets = cwd / "assets"
+libraries = cwd / "libraries"
+natives = cwd / "natives"
 
 if platform.system() != "Linux": raise Exception("Only Linux is supported for now")
 
@@ -27,7 +29,7 @@ def download(session: requests.Session, target: pathlib.Path, file: dict):
         with open(target, "rb") as fp:
             s = fp.read()
         if len(s) == file["size"] and hashlib.sha1(s).hexdigest() == file["sha1"]:
-            return
+            return s
 
     with session.get(file["url"]) as resp:
         s = resp.content
@@ -37,6 +39,7 @@ def download(session: requests.Session, target: pathlib.Path, file: dict):
                 f"File size is {len(s)}, expected {file['size']}, SHA1 is {hexdigest}, expected {file['sha1']}")
         with open(target, "wb") as fp:
             fp.write(s)
+    return s
 
 
 def main():
@@ -65,6 +68,10 @@ def main():
                 with open(hashed, "wb") as fp:
                     fp.write(resp.content)
 
+        asset_index = json.loads(download(session, assets / "indexes" / f"{version['assetIndex']['id']}.json", version["assetIndex"]))
+
+        for asset in asset_index["objects"].values():
+            download(session, assets / "objects" / asset["hash"][:2] / asset["hash"], {"sha1": asset["hash"], "size": asset["size"], "url": f"https://resources.download.minecraft.net/{asset['hash'][:2]}/{asset['hash']}"})
 
         os.makedirs(natives, exist_ok=True)
 

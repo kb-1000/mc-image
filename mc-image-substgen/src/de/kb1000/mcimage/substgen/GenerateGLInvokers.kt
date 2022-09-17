@@ -218,7 +218,8 @@ fun generateGLInvokers() {
         val typeSpec = TypeSpec.classBuilder("Target_${clazz.name.replace('.', '_')}")
                 .addAnnotation(
                         AnnotationSpec.builder(TargetClass::class.java)
-                                .addMember("value", clazz)
+                                .addMember("className", "\$S", clazz.name)
+                                .addMember("onlyWith", ClassName.get("de.kb1000.mcimage.util", "Environment", "ClientOnly"))
                                 .build()
                 )
                 .addModifiers(Modifier.FINAL)

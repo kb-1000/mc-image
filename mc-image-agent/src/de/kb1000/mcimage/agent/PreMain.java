@@ -39,6 +39,8 @@ public class PreMain {
         //instrumentation.addTransformer(new SVMClassInitAnalysisTransformer());
         instrumentation.addTransformer(new AWTNoToolkitTransformer());
         instrumentation.addTransformer(new SubstitutionRemapperTransformer());
+        instrumentation.addTransformer(new DedicatedServerGuiExitTransformer());
+        instrumentation.addTransformer(new HashMapComparableForTransformer());
         //instrumentation.addTransformer(new ClassDumper());
         if (!Config.traceReflectionMethods.isEmpty()) {
             instrumentation.addTransformer(new SVMReflectionMethodTraceTransformer());

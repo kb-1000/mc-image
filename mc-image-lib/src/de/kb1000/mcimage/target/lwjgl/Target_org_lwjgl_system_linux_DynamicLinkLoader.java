@@ -11,12 +11,12 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
 import com.oracle.svm.core.posix.headers.Dlfcn;
+import de.kb1000.mcimage.util.Environment;
 import org.graalvm.nativeimage.Platform;
 import org.graalvm.nativeimage.Platforms;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.system.linux.DynamicLinkLoader;
 
-@TargetClass(DynamicLinkLoader.class)
+@TargetClass(className = "org.lwjgl.system.linux.DynamicLinkLoader", onlyWith = Environment.ClientOnly.class)
 @Platforms(Platform.LINUX.class)
 final class Target_org_lwjgl_system_linux_DynamicLinkLoader {
     @Substitute

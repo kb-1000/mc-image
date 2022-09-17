@@ -68,7 +68,10 @@ internal fun generateJNIInvokerSubstitution() {
         val classReader = ClassReader(Files.readAllBytes(dir.resolve("JNI.class")))
         val typeBuilder = TypeSpec.classBuilder("Target_org_lwjgl_system_JNI")
         typeBuilder.addAnnotation(
-            AnnotationSpec.builder(TargetClass::class.java).addMember("value", "\$T.class", JNI::class.java).build()
+            AnnotationSpec.builder(TargetClass::class.java)
+                .addMember("className", "\$S", JNI::class.java.name)
+                .addMember("onlyWith", ClassName.get("de.kb1000.mcimage.util", "Environment", "ClientOnly"))
+                .build()
         )
         typeBuilder.addModifiers(Modifier.FINAL)
         classReader.accept(object : ClassVisitor(Opcodes.ASM9) {

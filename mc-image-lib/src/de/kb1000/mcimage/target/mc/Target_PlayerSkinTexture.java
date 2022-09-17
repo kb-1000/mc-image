@@ -11,8 +11,9 @@ package de.kb1000.mcimage.target.mc;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.TargetClass;
 import com.oracle.svm.core.annotate.TargetElement;
+import de.kb1000.mcimage.util.Environment;
 
-@TargetClass(className = "net/minecraft/unmapped/C_mcqxlzsy", classNameProvider = MinecraftClassNameProvider.class)
+@TargetClass(className = "net/minecraft/unmapped/C_mcqxlzsy", classNameProvider = MinecraftClassNameProvider.class, onlyWith = Environment.ClientOnly.class)
 final class Target_PlayerSkinTexture {
     @Alias
     @TargetElement(name = "m_tgesoskb")

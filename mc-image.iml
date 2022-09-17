@@ -12,6 +12,10 @@
       <excludeFolder url="file://$MODULE_DIR$/natives" />
       <excludeFolder url="file://$MODULE_DIR$/graalvm" />
       <excludeFolder url="file://$MODULE_DIR$/idealgraphvisualizer" />
+      <excludeFolder url="file://$MODULE_DIR$/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/graal_dumps" />
+      <excludeFolder url="file://$MODULE_DIR$/reports" />
+      <excludeFolder url="file://$MODULE_DIR$/world" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

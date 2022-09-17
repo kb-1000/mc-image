@@ -14,6 +14,7 @@ import com.mojang.blaze3d.platform.TextureUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.util.UUIDTypeAdapter;
 import com.oracle.svm.core.annotate.*;
+import de.kb1000.mcimage.util.Environment;
 import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.Nullable;
@@ -29,7 +30,7 @@ import java.util.Map;
 import java.util.UUID;
 
 // TODO: this is MC version specific
-@TargetClass(className = "net/minecraft/unmapped/C_atzfxoih", classNameProvider = MinecraftClassNameProvider.class)
+@TargetClass(className = "net/minecraft/unmapped/C_atzfxoih", classNameProvider = MinecraftClassNameProvider.class, onlyWith = Environment.ClientOnly.class)
 final class Target_RealmsTextureManager {
     @Alias
     @TargetElement(name = "f_qxtojezw")
@@ -137,12 +138,12 @@ final class Target_RealmsTextureManager {
     @TargetElement(name = "m_atnqscdp")
     private static native int getTextureId(String id, String image);
 
-    @TargetClass(className = "net/minecraft/unmapped/C_atzfxoih$C_ugsypoll", classNameProvider = MinecraftClassNameProvider.class)
+    @TargetClass(className = "net/minecraft/unmapped/C_atzfxoih$C_ugsypoll", classNameProvider = MinecraftClassNameProvider.class, onlyWith = Environment.ClientOnly.class)
     @Delete
     static final class Downloader {
     }
 
-    @TargetClass(className = "net/minecraft/unmapped/C_atzfxoih$C_wlblgnzd", classNameProvider = MinecraftClassNameProvider.class)
+    @TargetClass(className = "net/minecraft/unmapped/C_atzfxoih$C_wlblgnzd", classNameProvider = MinecraftClassNameProvider.class, onlyWith = Environment.ClientOnly.class)
     static final class RealmsTexture {
         @Delete
         @TargetElement(name = "f_phsegolm")

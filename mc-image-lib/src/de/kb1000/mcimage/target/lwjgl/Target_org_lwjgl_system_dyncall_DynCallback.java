@@ -11,11 +11,11 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.Delete;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import de.kb1000.mcimage.util.dyncall.DynCallbackSVM;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.system.dyncall.DynCallback;
 
-@TargetClass(DynCallback.class)
+@TargetClass(className = "org.lwjgl.system.dyncall.DynCallback", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_dyncall_DynCallback {
     @Substitute
     static long ndcbNewCallback(long signature, long funcptr, long userdata) {

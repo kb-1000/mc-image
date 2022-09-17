@@ -13,15 +13,15 @@ import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.AlwaysInline;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import org.jetbrains.annotations.NotNull;
 import org.lwjgl.system.CustomBuffer;
-import org.lwjgl.system.Pointer;
 
 import java.nio.ByteBuffer;
 
-@TargetClass(Pointer.class)
+@TargetClass(className = "org.lwjgl.system.Pointer", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_Pointer {
-    @TargetClass(Pointer.Default.class)
+    @TargetClass(className = "org.lwjgl.system.Pointer", innerClass = "Default", onlyWith = Environment.ClientOnly.class)
     static final class Default {
         @Alias
         static sun.misc.Unsafe UNSAFE;

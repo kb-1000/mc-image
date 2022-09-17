@@ -13,14 +13,14 @@ import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.AlwaysInline;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.apache.http.impl.auth.GGSSchemeBase;
 import org.apache.http.impl.auth.KerberosScheme;
 import org.apache.http.impl.auth.SPNegoScheme;
 
-@TargetClass(GGSSchemeBase.class)
+@TargetClass(className = "org.apache.http.impl.auth.GGSSchemeBase", onlyWith = Environment.ClientOnly.class)
 final class Target_org_apache_http_impl_auth_GGSSchemeBase {
     @Alias
     Log log;
@@ -39,7 +39,7 @@ final class GGSSchemeBaseSupport {
     }
 }
 
-@TargetClass(SPNegoScheme.class)
+@TargetClass(className = "org.apache.http.impl.auth.SPNegoScheme", onlyWith = Environment.ClientOnly.class)
 final class Target_org_apache_http_impl_auth_SPNegoScheme {
     @Substitute
     Target_org_apache_http_impl_auth_SPNegoScheme(final boolean stripPort) {
@@ -52,7 +52,7 @@ final class Target_org_apache_http_impl_auth_SPNegoScheme {
     }
 }
 
-@TargetClass(KerberosScheme.class)
+@TargetClass(className = "org.apache.http.impl.auth.KerberosScheme", onlyWith = Environment.ClientOnly.class)
 final class Target_org_apache_http_impl_auth_KerberosScheme {
     @Substitute
     Target_org_apache_http_impl_auth_KerberosScheme(final boolean stripPort) {

@@ -10,11 +10,11 @@ package de.kb1000.mcimage.target.lwjgl;
 
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
-import org.lwjgl.system.Library;
+import de.kb1000.mcimage.util.Environment;
 
 import java.util.function.Consumer;
 
-@TargetClass(Library.class)
+@TargetClass(className = "org.lwjgl.system.Library", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_Library {
     // loadSystem *should* only be used for loading JNI libs, and JNI libs are unwanted here.
     // Disable this code.

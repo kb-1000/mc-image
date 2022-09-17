@@ -12,14 +12,14 @@ import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
 import de.kb1000.mcimage.target.lwjgl.generated.Callbacks;
 import de.kb1000.mcimage.util.CStringConversion;
+import de.kb1000.mcimage.util.Environment;
 import de.kb1000.mcimage.util.dyncall.DynCallbackSVM.DCCallback;
 import de.kb1000.mcimage.util.dyncall.DynCallbackSVM.DCCallbackHandler;
 import org.graalvm.word.PointerBase;
-import org.lwjgl.system.Callback;
 
 import static de.kb1000.mcimage.util.dyncall.DynCallbackSVM.dcbNewCallback;
 
-@TargetClass(Callback.class)
+@TargetClass(className = "org.lwjgl.system.Callback", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_Callback {
     @Substitute
     static long create(String signature, Object instance) {

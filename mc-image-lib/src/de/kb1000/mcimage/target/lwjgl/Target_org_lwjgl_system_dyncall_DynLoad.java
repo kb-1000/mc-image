@@ -10,11 +10,11 @@ package de.kb1000.mcimage.target.lwjgl;
 
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import de.kb1000.mcimage.util.dyncall.DynLoadSVM;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.system.dyncall.DynLoad;
 
-@TargetClass(DynLoad.class)
+@TargetClass(className = "org.lwjgl.system.dyncall.DynLoad", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_dyncall_DynLoad {
     @Substitute
     static long ndlLoadLibrary(long libpath) {

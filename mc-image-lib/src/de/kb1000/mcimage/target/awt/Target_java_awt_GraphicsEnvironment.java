@@ -8,10 +8,20 @@
 
 package de.kb1000.mcimage.target.awt;
 
-import com.oracle.svm.core.annotate.Alias;
-import com.oracle.svm.core.annotate.RecomputeFieldValue;
-import com.oracle.svm.core.annotate.Substitute;
-import com.oracle.svm.core.annotate.TargetClass;
+import com.oracle.svm.core.ParsingReason;
+import com.oracle.svm.core.annotate.*;
+import com.oracle.svm.core.graal.InternalFeature;
+import jdk.vm.ci.meta.JavaKind;
+import jdk.vm.ci.meta.ResolvedJavaMethod;
+import org.graalvm.compiler.api.replacements.SnippetReflectionProvider;
+import org.graalvm.compiler.nodes.ConstantNode;
+import org.graalvm.compiler.nodes.graphbuilderconf.GraphBuilderConfiguration;
+import org.graalvm.compiler.nodes.graphbuilderconf.GraphBuilderContext;
+import org.graalvm.compiler.nodes.graphbuilderconf.InvocationPlugin;
+import org.graalvm.compiler.nodes.graphbuilderconf.InvocationPlugins;
+import org.graalvm.compiler.phases.util.Providers;
+
+import java.awt.*;
 
 // TODO: MC uses this, for whatever reason
 // reachability handler uses this, can't delete
@@ -35,5 +45,29 @@ final class Target_java_awt_GraphicsEnvironment {
     @Substitute
     static boolean getHeadlessProperty() {
         return true;
+    }
+}
+
+// this helps constant folding remove the server gui code
+@AutomaticFeature
+final class AWTGraphicsEnvironmentHeadlessFeature implements InternalFeature {
+    @Override
+    public void registerInvocationPlugins(Providers providers, SnippetReflectionProvider snippetReflection, GraphBuilderConfiguration.Plugins plugins, ParsingReason reason) {
+        var invocationPlugins = plugins.getInvocationPlugins();
+        var registration = new InvocationPlugins.Registration(invocationPlugins, GraphicsEnvironment.class);
+        registration.register(new InvocationPlugin("isHeadless") {
+            @Override
+            public boolean apply(GraphBuilderContext b, ResolvedJavaMethod targetMethod, Receiver receiver) {
+                b.addPush(JavaKind.Boolean, ConstantNode.forBoolean(true, b.getGraph()));
+                return true;
+            }
+        });
+        registration.register(new InvocationPlugin("getHeadlessProperty") {
+            @Override
+            public boolean apply(GraphBuilderContext b, ResolvedJavaMethod targetMethod, Receiver receiver) {
+                b.addPush(JavaKind.Boolean, ConstantNode.forBoolean(true, b.getGraph()));
+                return true;
+            }
+        });
     }
 }

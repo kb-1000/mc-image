@@ -11,13 +11,13 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.Delete;
 import com.oracle.svm.core.annotate.TargetClass;
-import org.lwjgl.system.CustomBuffer;
+import de.kb1000.mcimage.util.Environment;
 
 import javax.annotation.Nullable;
 import java.nio.ByteBuffer;
 
 // TODO: there are Unsafe calls here
-@TargetClass(CustomBuffer.class)
+@TargetClass(className = "org.lwjgl.system.CustomBuffer", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_CustomBuffer {
     @Alias
     @Nullable

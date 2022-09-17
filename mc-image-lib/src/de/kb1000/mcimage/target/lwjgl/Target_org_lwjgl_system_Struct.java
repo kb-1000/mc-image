@@ -12,6 +12,7 @@ import com.oracle.svm.core.SubstrateUtil;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import org.lwjgl.system.Struct;
 
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ import java.nio.ByteBuffer;
 
 import static de.kb1000.mcimage.util.HostedConstants.UNSAFE;
 
-@TargetClass(Struct.class)
+@TargetClass(className = "org.lwjgl.system.Struct", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_Struct {
     @Nullable
     @Alias

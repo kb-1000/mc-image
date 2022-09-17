@@ -8,11 +8,11 @@
 
 package de.kb1000.mcimage.target.mc;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 
-@TargetClass(RenderSystem.class)
+@TargetClass(className = "com.mojang.blaze3d.systems.RenderSystem", onlyWith = Environment.ClientOnly.class)
 final class Target_RenderSystem {
     @Alias
     static native void setShaderTexture(int var0, Target_Identifier var1);

@@ -11,10 +11,11 @@ package de.kb1000.mcimage.target.mc;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.TargetClass;
 import com.oracle.svm.core.annotate.TargetElement;
+import de.kb1000.mcimage.util.Environment;
 
 import java.net.Proxy;
 
-@TargetClass(className = "net/minecraft/unmapped/C_ayfeobid", classNameProvider = MinecraftClassNameProvider.class)
+@TargetClass(className = "net/minecraft/unmapped/C_ayfeobid", classNameProvider = MinecraftClassNameProvider.class, onlyWith = Environment.ClientOnly.class)
 final class Target_MinecraftClient {
     @Alias
     @TargetElement(name = "m_wipirsgk")

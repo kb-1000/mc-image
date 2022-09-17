@@ -11,12 +11,13 @@ package de.kb1000.mcimage.target.mc;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.TargetClass;
 import com.oracle.svm.core.annotate.TargetElement;
+import de.kb1000.mcimage.util.Environment;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
-@TargetClass(className = "net/minecraft/unmapped/C_ayikuhxa", classNameProvider = MinecraftClassNameProvider.class)
+@TargetClass(className = "net/minecraft/unmapped/C_ayikuhxa", classNameProvider = MinecraftClassNameProvider.class, onlyWith = Environment.ClientOnly.class)
 final class Target_NativeImage {
     @Alias
     Target_NativeImage(int width, int height, boolean useStb) {

@@ -10,9 +10,10 @@ package de.kb1000.mcimage.target.lwjgl;
 
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import org.graalvm.word.WordFactory;
 
-@TargetClass(className = "org.lwjgl.stb.LibSTB")
+@TargetClass(className = "org.lwjgl.stb.LibSTB", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_stb_LibSTB {
     @Substitute
     static void setupMalloc(long malloc, long calloc, long realloc, long free, long aligned_alloc, long aligned_free) {

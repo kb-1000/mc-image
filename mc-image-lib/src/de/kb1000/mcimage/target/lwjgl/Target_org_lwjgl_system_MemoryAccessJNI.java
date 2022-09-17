@@ -13,6 +13,7 @@ import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
 import com.oracle.svm.core.c.CGlobalData;
 import com.oracle.svm.core.c.CGlobalDataFactory;
+import de.kb1000.mcimage.util.Environment;
 import org.graalvm.nativeimage.ImageSingletons;
 import org.graalvm.nativeimage.c.function.CFunctionPointer;
 import org.graalvm.nativeimage.c.struct.SizeOf;
@@ -32,7 +33,7 @@ final class AllocFunctionPointers {
     static final CGlobalData<CFunctionPointer> aligned_free = CGlobalDataFactory.forSymbol("aligned_free");
 }
 
-@TargetClass(className = "org.lwjgl.system.MemoryAccessJNI")
+@TargetClass(className = "org.lwjgl.system.MemoryAccessJNI", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_MemoryAccessJNI {
     @Substitute
     static int getPointerSize() {
@@ -142,6 +143,11 @@ final class Target_org_lwjgl_system_MemoryAccessJNI {
 
 @AutomaticFeature
 class MemoryAccessJNIFeature implements Feature {
+    @Override
+    public boolean isInConfiguration(IsInConfigurationAccess access) {
+        return !Environment.SERVER;
+    }
+
     @Override
     public void duringSetup(DuringSetupAccess access) {
         RuntimeClassInitializationSupport rci = ImageSingletons.lookup(RuntimeClassInitializationSupport.class);

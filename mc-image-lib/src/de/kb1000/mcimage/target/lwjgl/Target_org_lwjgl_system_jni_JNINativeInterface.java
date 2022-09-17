@@ -11,10 +11,10 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.KeepOriginal;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.system.jni.JNINativeInterface;
 
-@TargetClass(JNINativeInterface.class)
+@TargetClass(className = "org.lwjgl.system.jni.JNINativeInterface", onlyWith = Environment.ClientOnly.class)
 @Substitute // Kill the JNI interface, it's not needed here...
 final class Target_org_lwjgl_system_jni_JNINativeInterface {
     // ... except for global references, which are used by Callback. Emulate that here.

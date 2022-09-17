@@ -11,11 +11,11 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
 import de.kb1000.mcimage.util.CException;
+import de.kb1000.mcimage.util.Environment;
 import de.kb1000.mcimage.util.stb.STBImageWriteSVM;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.stb.STBImageWrite;
 
-@TargetClass(STBImageWrite.class)
+@TargetClass(className = "org.lwjgl.stb.STBImageWrite", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_stb_STBImageWrite {
     @Substitute
     static long nstbi_write_png_compression_level() {

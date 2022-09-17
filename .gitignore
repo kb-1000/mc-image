@@ -4,6 +4,7 @@
 /crash-reports
 /reports
 minecraft-client*
+minecraft-server*
 !minecraft-client-gdb.gdb
 /mc-image-lib/gen
 /out
@@ -30,3 +31,10 @@ env.sh
 *.log
 perf.data
 mc-image-config.txt
+/world
+ops.json
+server.properties
+whitelist.json
+eula.txt
+banned-ips.json
+banned-players.json

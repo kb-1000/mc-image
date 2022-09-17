@@ -11,11 +11,11 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
 import de.kb1000.mcimage.util.CException;
+import de.kb1000.mcimage.util.Environment;
 import de.kb1000.mcimage.util.stb.STBImageSVM;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.stb.STBImage;
 
-@TargetClass(STBImage.class)
+@TargetClass(className = "org.lwjgl.stb.STBImage", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_stb_STBImage {
     @Substitute
     static long nstbi_load_from_memory(long buffer, int len, long x, long y, long channels_in_file, int desired_channels) {

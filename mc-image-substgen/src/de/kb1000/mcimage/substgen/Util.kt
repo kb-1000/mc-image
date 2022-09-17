@@ -9,12 +9,17 @@
 package de.kb1000.mcimage.substgen
 
 import com.squareup.javapoet.AnnotationSpec
+import com.squareup.javapoet.ClassName
+import com.squareup.javapoet.TypeName
 import kotlin.reflect.KClass
 
-fun AnnotationSpec.Builder.addMember(name: String, clazz: Class<*>): AnnotationSpec.Builder =
-    addMember(name, "\$T.class", clazz)
+fun AnnotationSpec.Builder.addMember(name: String, type: TypeName): AnnotationSpec.Builder =
+    addMember(name, "\$T.class", type)
 
-fun AnnotationSpec.Builder.addMember(name: String, clazz: KClass<*>): AnnotationSpec.Builder =
+fun AnnotationSpec.Builder.addMember(name: String, clazz: Class<*>): AnnotationSpec.Builder =
+    addMember(name, ClassName.get(clazz))
+
+inline fun AnnotationSpec.Builder.addMember(name: String, clazz: KClass<*>): AnnotationSpec.Builder =
     addMember(name, clazz.java)
 
 fun AnnotationSpec.Builder.addMember(name: String, enum: Enum<*>): AnnotationSpec.Builder =

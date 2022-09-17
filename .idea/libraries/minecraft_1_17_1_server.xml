@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="minecraft-1.17.1-server">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/minecraft/1.17.1/minecraft-1.17.1-server.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/libraries/com/mojang/minecraft/1.17.1/minecraft-1.17.1-server.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/datafixerupper-4.0.26-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.ideaLibSources/commons-lang3-3.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

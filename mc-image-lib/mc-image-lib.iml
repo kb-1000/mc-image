@@ -33,5 +33,6 @@
     <orderEntry type="library" exported="" name="hashed" level="project" />
     <orderEntry type="library" exported="" name="slf4j.jcl.over" level="project" />
     <orderEntry type="library" exported="" name="net.fabricmc.tiny.mappings.parser" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="minecraft-1.17.1-server" level="project" />
   </component>
 </module>

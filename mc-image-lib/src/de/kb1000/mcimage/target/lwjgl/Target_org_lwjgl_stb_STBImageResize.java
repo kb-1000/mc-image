@@ -10,11 +10,11 @@ package de.kb1000.mcimage.target.lwjgl;
 
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import de.kb1000.mcimage.util.stb.STBImageResizeSVM;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.stb.STBImageResize;
 
-@TargetClass(STBImageResize.class)
+@TargetClass(className = "org.lwjgl.stb.STBImageResize", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_stb_STBImageResize {
     @Substitute
     static int nstbir_resize_uint8(long input_pixels, int input_w, int input_h, int input_stride_in_bytes, long output_pixels, int output_w, int output_h, int output_stride_in_bytes, int num_channels) {

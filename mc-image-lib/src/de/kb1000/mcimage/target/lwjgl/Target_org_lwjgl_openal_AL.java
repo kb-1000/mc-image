@@ -11,14 +11,14 @@ package de.kb1000.mcimage.target.lwjgl;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
-import org.lwjgl.openal.AL;
+import de.kb1000.mcimage.util.Environment;
 import org.lwjgl.openal.ALCapabilities;
 
 import javax.annotation.Nullable;
 
-@TargetClass(AL.class)
+@TargetClass(className = "org.lwjgl.openal.AL", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_openal_AL {
-    @TargetClass(className = "org.lwjgl.openal.AL$ICDStatic")
+    @TargetClass(className = "org.lwjgl.openal.AL", innerClass = "ICDStatic", onlyWith = Environment.ClientOnly.class)
     static final class ICDStatic {
         @Alias
         @Nullable

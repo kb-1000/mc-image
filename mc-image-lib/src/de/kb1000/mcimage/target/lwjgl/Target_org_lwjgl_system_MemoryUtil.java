@@ -13,8 +13,8 @@ import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.Delete;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
+import de.kb1000.mcimage.util.Environment;
 import org.graalvm.word.WordFactory;
-import org.lwjgl.system.MemoryUtil;
 import sun.misc.Unsafe;
 
 import javax.annotation.Nonnull;
@@ -23,7 +23,7 @@ import java.nio.*;
 
 import static org.lwjgl.system.MemoryUtil.*;
 
-@TargetClass(MemoryUtil.class)
+@TargetClass(className = "org.lwjgl.system.MemoryUtil", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_MemoryUtil {
     @SuppressWarnings("NotNullFieldNotInitialized")
     @Nonnull

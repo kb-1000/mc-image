@@ -12,7 +12,7 @@ import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.Delete;
 import com.oracle.svm.core.annotate.Substitute;
 import com.oracle.svm.core.annotate.TargetClass;
-import org.lwjgl.system.MemoryStack;
+import de.kb1000.mcimage.util.Environment;
 
 import javax.annotation.Nullable;
 import java.nio.ByteBuffer;
@@ -20,7 +20,7 @@ import java.nio.ByteBuffer;
 import static org.lwjgl.system.MemoryUtil.memAddress;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
-@TargetClass(MemoryStack.class)
+@TargetClass(className = "org.lwjgl.system.MemoryStack", onlyWith = Environment.ClientOnly.class)
 final class Target_org_lwjgl_system_MemoryStack {
     @Alias
     Target_org_lwjgl_system_MemoryStack(@Nullable ByteBuffer container, long address, int size) {
@@ -38,7 +38,7 @@ final class Target_org_lwjgl_system_MemoryStack {
         return new Target_org_lwjgl_system_MemoryStack(null, address, size);
     }
 
-    @TargetClass(className = "org.lwjgl.system.MemoryStack$DebugMemoryStack")
+    @TargetClass(className = "org.lwjgl.system.MemoryStack$DebugMemoryStack", onlyWith = Environment.ClientOnly.class)
     @Delete
     static final class Target_DebugMemoryStack {
     }

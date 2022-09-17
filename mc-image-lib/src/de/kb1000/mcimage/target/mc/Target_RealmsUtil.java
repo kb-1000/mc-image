@@ -12,10 +12,11 @@ import com.mojang.authlib.minecraft.MinecraftProfileTexture;
 import com.oracle.svm.core.annotate.Alias;
 import com.oracle.svm.core.annotate.TargetClass;
 import com.oracle.svm.core.annotate.TargetElement;
+import de.kb1000.mcimage.util.Environment;
 
 import java.util.Map;
 
-@TargetClass(className = "net/minecraft/unmapped/C_veycqpnp", classNameProvider = MinecraftClassNameProvider.class)
+@TargetClass(className = "net/minecraft/unmapped/C_veycqpnp", classNameProvider = MinecraftClassNameProvider.class, onlyWith = Environment.ClientOnly.class)
 final class Target_RealmsUtil {
     @Alias
     @TargetElement(name = "m_gbelqhtj")
