@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sun.xml.dtd-parser:dtd-parser:1.5.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.xml.dtd-parser/dtd-parser/1.5.0/7e15971a0509f6b7091f49da3a2a727cfa756442/dtd-parser-1.5.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.xml.dtd-parser/dtd-parser/1.5.0/b1ceb5a2c134b1c51b90f247c75ded6ea4d5ae74/dtd-parser-1.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

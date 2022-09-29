@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.graalvm.nativeimage:objectfile:22.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.nativeimage/objectfile/22.2.0/6361c8a565e6d4b2eebe8b2cbfb2351f36eaeab5/objectfile-22.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.nativeimage/objectfile/22.2.0/9cccdac5432244eb46caefac97c8f6ae1346839e/objectfile-22.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

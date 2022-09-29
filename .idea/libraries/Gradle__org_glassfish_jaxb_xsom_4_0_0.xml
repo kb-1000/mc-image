@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.glassfish.jaxb:xsom:4.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/xsom/4.0.0/680e05f400be95f9776ee5158e1c1b58788710a1/xsom-4.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/xsom/4.0.0/dd019e523d8e9564209928a3c6ef02f5a1cd469f/xsom-4.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="native-image build debug" type="Remote">
-    <module name="mc-image-lib" />
+    <module name="mc-image.mc-image-lib.optimize" />
     <option name="USE_SOCKET_TRANSPORT" value="true" />
     <option name="SERVER_MODE" value="false" />
     <option name="SHMEM_ADDRESS" />

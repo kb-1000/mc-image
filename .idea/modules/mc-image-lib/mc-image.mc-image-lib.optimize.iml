@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":mc-image-lib:optimize" external.linked.project.path="$MODULE_DIR$/../../../mc-image-lib" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="mc-image" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="minecraft" name="Minecraft">
+      <configuration>
+        <userChosenTypes>
+          <map>
+            <entry key="MCP" value="false" />
+          </map>
+        </userChosenTypes>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/../../../mc-image-lib/build/classes/java/optimize" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../mc-image-lib/src/optimize">
+      <sourceFolder url="file://$MODULE_DIR$/../../../mc-image-lib/src/optimize/java" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="mc-image.mc-image-lib.main" />
+    <orderEntry type="library" name="Gradle: org.graalvm.nativeimage:svm:22.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.quiltmc:hashed:1.17.1" level="project" />
+    <orderEntry type="library" name="Gradle: net.fabricmc:tiny-mappings-parser:0.3.0+build.17" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:23.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang.minecraft:client:1.17.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:blocklist:1.0.5" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:patchy:2.1.6" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.oshi:oshi-core:5.7.5" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna:5.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.dev.jna:jna-platform:5.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.8.0-beta4" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-slf4j18-impl:2.14.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.ibm.icu:icu4j:66.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:javabridge:1.1.23" level="project" />
+    <orderEntry type="library" name="Gradle: net.sf.jopt-simple:jopt-simple:5.0.3" level="project" />
+    <orderEntry type="library" name="Gradle: io.netty:netty-all:4.1.25.Final" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.guava:guava:21.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-lang3:3.5" level="project" />
+    <orderEntry type="library" name="Gradle: commons-io:commons-io:2.5" level="project" />
+    <orderEntry type="library" name="Gradle: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.jinput:jinput:2.0.5" level="project" />
+    <orderEntry type="library" name="Gradle: net.java.jutils:jutils:1.0.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:brigadier:1.0.18" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:datafixerupper:4.0.26" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.8.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:authlib:2.3.31" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.commons:commons-compress:1.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.3.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.3.2" level="project" />
+    <orderEntry type="library" name="Gradle: it.unimi.dsi:fastutil:8.2.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.14.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-core:2.14.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-jemalloc:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-openal:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-opengl:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-glfw:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-stb:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: org.lwjgl:lwjgl-tinyfd:3.2.2" level="project" />
+    <orderEntry type="library" name="Gradle: com.mojang:text2speech:1.11.3" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:jcl-over-slf4j:1.8.0-beta4" level="project" />
+    <orderEntry type="library" name="Gradle: org.graalvm.nativeimage:objectfile:22.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.graalvm.nativeimage:pointsto:22.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.graalvm.nativeimage:native-image-base:22.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.graalvm.compiler:compiler:22.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.graalvm.sdk:graal-sdk:22.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.graalvm.truffle:truffle-api:22.2.0" level="project" />
+  </component>
+</module>

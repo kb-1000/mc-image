@@ -3,11 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/mc-image.iml" filepath="$PROJECT_DIR$/mc-image.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mc-image-agent/mc-image-agent.iml" filepath="$PROJECT_DIR$/mc-image-agent/mc-image-agent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mc-image-agent/optimize/mc-image-agent.optimize.iml" filepath="$PROJECT_DIR$/mc-image-agent/optimize/mc-image-agent.optimize.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mc-image-lib/mc-image-lib.iml" filepath="$PROJECT_DIR$/mc-image-lib/mc-image-lib.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mc-image-lib/optimize/mc-image-lib.optimize.iml" filepath="$PROJECT_DIR$/mc-image-lib/optimize/mc-image-lib.optimize.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mc-image-substgen/mc-image-substgen.iml" filepath="$PROJECT_DIR$/mc-image-substgen/mc-image-substgen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.optimize.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.optimize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-agent/mc-image.mc-image-agent.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.optimize.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.optimize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-lib/mc-image.mc-image-lib.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-substgen/mc-image.mc-image-substgen.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-substgen/mc-image.mc-image-substgen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-substgen/mc-image.mc-image-substgen.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-substgen/mc-image.mc-image-substgen.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mc-image-substgen/mc-image.mc-image-substgen.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mc-image-substgen/mc-image.mc-image-substgen.test.iml" />
     </modules>
   </component>
 </project>

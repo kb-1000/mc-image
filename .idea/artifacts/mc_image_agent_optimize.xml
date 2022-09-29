@@ -2,10 +2,10 @@
   <artifact type="jar" build-on-make="true" name="mc-image-agent-optimize">
     <output-path>$PROJECT_DIR$/out/artifacts/mc_image_agent_optimize</output-path>
     <root id="archive" name="mc-image-agent.jar">
-      <element id="module-output" name="mc-image-agent" />
-      <element id="module-output" name="mc-image-agent.optimize" />
+      <element id="module-output" name="mc-image.mc-image-agent.main" />
+      <element id="module-output" name="mc-image.mc-image-agent.optimize" />
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/mc-image-agent/optimize/resources/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/mc-image-agent/src/optimize/resources/META-INF/MANIFEST.MF" />
       </element>
     </root>
   </artifact>

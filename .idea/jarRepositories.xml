@@ -4,7 +4,7 @@
     <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Maven Central repository" />
-      <option name="url" value="https://repo1.maven.org/maven2" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="jboss.community" />
@@ -13,8 +13,8 @@
     </remote-repository>
     <remote-repository>
       <option name="id" value="minecraft" />
-      <option name="name" value="Minecraft libraries" />
-      <option name="url" value="https://libraries.minecraft.net" />
+      <option name="name" value="Minecraft" />
+      <option name="url" value="https://libraries.minecraft.net/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="quiltmc" />

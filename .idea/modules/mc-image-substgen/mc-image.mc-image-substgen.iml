@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":mc-image-substgen" external.linked.project.path="$MODULE_DIR$/../../../mc-image-substgen" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="mc-image" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../mc-image-substgen">
+      <excludeFolder url="file://$MODULE_DIR$/../../../mc-image-substgen/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../mc-image-substgen/build" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

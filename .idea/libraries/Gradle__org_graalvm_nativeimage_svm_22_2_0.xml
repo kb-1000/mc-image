@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.graalvm.nativeimage:svm:22.2.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.nativeimage/svm/22.2.0/ab649d1730776fbca777cf28c3535a1e6c44fc11/svm-22.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.graalvm.nativeimage/svm/22.2.0/c28f3170b548314b947eb07e9750d203cf6e0e76/svm-22.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

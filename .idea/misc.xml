@@ -20,9 +20,6 @@
       <writeAnnotation name="com.oracle.svm.core.annotate.InjectAccessors" />
     </writeAnnotations>
   </component>
-  <component name="KotlinMultiplatform">
-    <allAvailableExecutables />
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="GraalVM 17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
