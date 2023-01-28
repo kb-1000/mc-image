@@ -2,6 +2,8 @@
 
 Compile Minecraft to a native executable using [GraalVM native-image](https://www.graalvm.org/native-image/)!
 
+⚠️ Only Linux is currently supported!
+
 ## Build instructions
 
 1. Build the Gradle project using `./gradlew assemble`
