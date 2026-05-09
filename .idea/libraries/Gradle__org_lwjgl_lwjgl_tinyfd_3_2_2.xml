@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.lwjgl:lwjgl-tinyfd:3.2.2">
+  <library name="Gradle: org.lwjgl:lwjgl-tinyfd:3.2.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.lwjgl" artifactId="lwjgl-tinyfd" version="3.2.2" baseVersion="3.2.2" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-tinyfd/3.2.2/fcbe606c8f8da6f8f9a05e2c540eb1ee8632b0e9/lwjgl-tinyfd-3.2.2.jar!/" />
     </CLASSES>

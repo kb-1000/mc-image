@@ -116,43 +116,43 @@ repositories {
 }
 
 sourceSets {
-    create("optimize") {
+    register("optimize") {
         compileClasspath += sourceSets.main.get().output
         runtimeClasspath += sourceSets.main.get().output
     }
 }
 
-val minecraftLibrariesSlf4j: Configuration by configurations.creating
-val minecraftLibraries: Configuration by configurations.creating {
+val minecraftLibrariesSlf4j by configurations.registering
+val minecraftLibraries by configurations.registering {
     extendsFrom(minecraftLibrariesSlf4j)
     isCanBeConsumed = true
     isCanBeResolved = true
 }
-val minecraftNatives: Configuration by configurations.creating
-val hashedMojmap: Configuration by configurations.creating
-val graal: Configuration by configurations.creating {
+val minecraftNatives by configurations.registering
+val hashedMojmap by configurations.registering
+val graal by configurations.registering {
     isCanBeConsumed = true
     isCanBeResolved = true
 }
-val minecraftClient: Configuration by configurations.creating {
+val minecraftClient by configurations.registering {
     extendsFrom(minecraftLibraries, hashedMojmap)
 }
-val minecraftServer: Configuration by configurations.creating {
+val minecraftServer by configurations.registering {
     extendsFrom(hashedMojmap)
 }
-val substgen: Configuration by configurations.creating
+val substgen by configurations.registering
 
 
 configurations {
     implementation {
         extendsFrom(minecraftClient, graal)
     }
-    getByName("optimizeCompileClasspath") {
-        extendsFrom(compileClasspath.get())
+    named("optimizeCompileClasspath") {
+        extendsFrom(compileClasspath)
     }
 
-    getByName("optimizeRuntimeClasspath") {
-        extendsFrom(runtimeClasspath.get())
+    named("optimizeRuntimeClasspath") {
+        extendsFrom(runtimeClasspath)
     }
 }
 
@@ -173,7 +173,7 @@ data class Library(
 
 val libs: List<Library> =
     gson.fromJson(versionJson.getAsJsonArray("libraries"), object : TypeToken<List<Library>>() {}.type)
-val slf4jPattern = Regex("^org.slf4j:slf4j-api:(.*)\$")
+val slf4jPattern = Regex("^org.slf4j:slf4j-api:(.*)$")
 lateinit var slf4jVersion: String
 val operatingSystem: OperatingSystem =
     org.gradle.nativeplatform.platform.internal.DefaultNativePlatform.getCurrentOperatingSystem()
@@ -196,7 +196,7 @@ for (lib in libs) {
 
 val substgenOutput = buildDir.resolve("generated/sources/substgen/java/main")
 
-val substgenTask = tasks.create<JavaExec>("substgen") {
+val substgenTask = tasks.register<JavaExec>("substgen") {
     val bytecodeOutput = rootProject.file("java.base")
     inputs.files(substgen)
     outputs.dirs(substgenOutput, bytecodeOutput)
@@ -311,14 +311,14 @@ dependencies {
     substgen(project(":mc-image-substgen"))
 }
 
-val extractNatives by tasks.creating(Copy::class) {
+val extractNatives by tasks.registering(Copy::class) {
     destinationDir = rootProject.file("natives")
-    from(minecraftNatives.map(::zipTree)) {
+    from(minecraftNatives.map { it.map(::zipTree) })  {
         exclude("META-INF/", "module-info.class")
     }
 }
 
-val optimizeJar by tasks.creating(Jar::class) {
+val optimizeJar by tasks.registering(Jar::class) {
     archiveClassifier.set("optimize")
     from(sourceSets["optimize"].output)
 }
@@ -336,7 +336,7 @@ data class AssetIndex(val objects: Map<String, AssetObject>) {
 
 val httpClient = HttpClient.newHttpClient()
 
-val downloadAssets: Task by tasks.creating {
+val downloadAssets by tasks.registering {
     inputs.file(versionFile)
     val assetRoot = rootProject.file("assets").toPath()
     outputs.dir(assetRoot)
@@ -378,19 +378,22 @@ val downloadAssets: Task by tasks.creating {
     }
 }
 
-val downloadDyncall: Task by tasks.creating {
+val downloadDyncall by tasks.registering {
     val libList = rootProject.file("libs.txt").readLines()
     inputs.property("libs", libList)
     libList.forEach {
         val file = rootProject.file(it.split('/').last())
         outputs.file(file)
         doLast {
-            httpClient.send(HttpRequest.newBuilder(URI(it)).build(), BodyHandlers.ofFile(file.toPath()))
+            httpClient.send(
+                HttpRequest.newBuilder(URI(it)).build(),
+                BodyHandlers.ofFile(file.toPath())
+            )
         }
     }
 }
 
-val compileStb by tasks.creating(Exec::class) {
+val compileStb by tasks.registering(Exec::class) {
     inputs.files(rootProject.file("stb.c"), rootProject.file("stb.h"))
     inputs.dir(rootProject.file("stb"))
     outputs.file(rootProject.file("stb.o"))
@@ -410,7 +413,7 @@ val compileStb by tasks.creating(Exec::class) {
     )
 }
 
-val stbAr by tasks.creating(Exec::class) {
+val stbAr by tasks.registering(Exec::class) {
     inputs.files(compileStb)
     val libFile = rootProject.file("libstb.a")
     outputs.file(libFile)
@@ -421,13 +424,15 @@ val stbAr by tasks.creating(Exec::class) {
     commandLine("llvm-ar", "rcs", "libstb.a", "stb.o")
 }
 
-val printClasspaths: Task by tasks.creating {
-    val classpathClient = sourceSets.main.get().output + minecraftLibraries + minecraftClient
-    val classpathServer = sourceSets.main.get().output + minecraftLibrariesSlf4j + minecraftServer
+val printClasspaths by tasks.registering {
+    val classpathClient =
+        sourceSets.main.get().output + minecraftLibraries.get() + minecraftClient.get()
+    val classpathServer =
+        sourceSets.main.get().output + minecraftLibrariesSlf4j.get() + minecraftServer.get()
     val classpathOptimize = sourceSets["optimize"].output
-    inputs.property("classpathClient", classpathClient)
-    inputs.property("classpathServer", classpathServer)
-    inputs.property("classpathOptimize", classpathOptimize)
+    inputs.property("classpathClient", provider(classpathClient::toList))
+    inputs.property("classpathServer", provider(classpathServer::toList))
+    inputs.property("classpathOptimize", provider(classpathOptimize::toList))
     outputs.file("classpaths.sh")
     doFirst {
         file("classpaths.sh").writeText(

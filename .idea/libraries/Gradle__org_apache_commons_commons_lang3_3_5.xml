@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.commons:commons-lang3:3.5">
+  <library name="Gradle: org.apache.commons:commons-lang3:3.5" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.apache.commons" artifactId="commons-lang3" version="3.5" baseVersion="3.5" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.5/6c6c702c89bfff3cd9e80b04d668c5e190d588c6/commons-lang3-3.5.jar!/" />
     </CLASSES>

@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: it.unimi.dsi:fastutil:8.2.1">
+  <library name="Gradle: it.unimi.dsi:fastutil:8.2.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="it.unimi.dsi" artifactId="fastutil" version="8.2.1" baseVersion="8.2.1" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/it.unimi.dsi/fastutil/8.2.1/5ad88f325e424f8dbc2be5459e21ea5cab3864e9/fastutil-8.2.1.jar!/" />
     </CLASSES>

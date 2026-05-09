@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: com.squareup:javapoet:1.13.0">
+  <library name="Gradle: com.squareup:javapoet:1.13.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.squareup" artifactId="javapoet" version="1.13.0" baseVersion="1.13.0" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup/javapoet/1.13.0/d6562d385049f35eb50403fa86bb11cce76b866a/javapoet-1.13.0.jar!/" />
     </CLASSES>

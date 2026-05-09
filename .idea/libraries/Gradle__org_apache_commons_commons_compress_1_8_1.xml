@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.apache.commons:commons-compress:1.8.1">
+  <library name="Gradle: org.apache.commons:commons-compress:1.8.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.apache.commons" artifactId="commons-compress" version="1.8.1" baseVersion="1.8.1" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar!/" />
     </CLASSES>

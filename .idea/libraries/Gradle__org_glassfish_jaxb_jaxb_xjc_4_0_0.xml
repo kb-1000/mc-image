@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.glassfish.jaxb:jaxb-xjc:4.0.0">
+  <library name="Gradle: org.glassfish.jaxb:jaxb-xjc:4.0.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.glassfish.jaxb" artifactId="jaxb-xjc" version="4.0.0" baseVersion="4.0.0" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.glassfish.jaxb/jaxb-xjc/4.0.0/fefc123d8b9828f27c85c84533414e2da83914c1/jaxb-xjc-4.0.0.jar!/" />
     </CLASSES>

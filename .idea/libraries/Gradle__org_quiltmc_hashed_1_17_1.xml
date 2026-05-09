@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.quiltmc:hashed:1.17.1">
+  <library name="Gradle: org.quiltmc:hashed:1.17.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.quiltmc" artifactId="hashed" version="1.17.1" baseVersion="1.17.1" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.quiltmc/hashed/1.17.1/8e4a5c8421fc24a300445a785d2072ac8c8d8976/hashed-1.17.1.jar!/" />
     </CLASSES>

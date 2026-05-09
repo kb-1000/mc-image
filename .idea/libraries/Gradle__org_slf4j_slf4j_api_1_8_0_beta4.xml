@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.slf4j:slf4j-api:1.8.0-beta4">
+  <library name="Gradle: org.slf4j:slf4j-api:1.8.0-beta4" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.slf4j" artifactId="slf4j-api" version="1.8.0-beta4" baseVersion="1.8.0-beta4" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.8.0-beta4/83b0359d847ee053d745be7ec0d8e9e8a44304b4/slf4j-api-1.8.0-beta4.jar!/" />
     </CLASSES>

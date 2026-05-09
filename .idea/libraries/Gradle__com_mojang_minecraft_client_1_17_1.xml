@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: com.mojang.minecraft:client:1.17.1">
+  <library name="Gradle: com.mojang.minecraft:client:1.17.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.mojang.minecraft" artifactId="client" version="1.17.1" baseVersion="1.17.1" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mojang.minecraft/client/1.17.1/8d9b65467c7913fcf6f5b2e729d44a1e00fde150/client-1.17.1.jar!/" />
     </CLASSES>

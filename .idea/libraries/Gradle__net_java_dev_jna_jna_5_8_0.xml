@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: net.java.dev.jna:jna:5.8.0">
+  <library name="Gradle: net.java.dev.jna:jna:5.8.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="net.java.dev.jna" artifactId="jna" version="5.8.0" baseVersion="5.8.0" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.8.0/3551d8d827e54858214107541d3aff9c615cb615/jna-5.8.0.jar!/" />
     </CLASSES>

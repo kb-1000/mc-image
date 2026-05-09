@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.ow2.asm:asm-commons:9.9.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.ow2.asm" artifactId="asm-commons" version="9.9.1" baseVersion="9.9.1" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/9.9.1/ab35de4c537184a09339069f1a3b3aacf2289149/asm-commons-9.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-commons/9.9.1/49478a5b81d1887856dd5fda40d3a8c8280613ec/asm-commons-9.9.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

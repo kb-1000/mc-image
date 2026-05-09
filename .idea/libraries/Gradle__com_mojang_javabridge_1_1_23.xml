@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: com.mojang:javabridge:1.1.23">
+  <library name="Gradle: com.mojang:javabridge:1.1.23" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.mojang" artifactId="javabridge" version="1.1.23" baseVersion="1.1.23" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mojang/javabridge/1.1.23/3e5084d916ba393dfd82928ec97663aeb10b2e2c/javabridge-1.1.23.jar!/" />
     </CLASSES>

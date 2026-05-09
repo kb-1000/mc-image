@@ -8,6 +8,10 @@
             <entry key="MCP" value="false" />
           </map>
         </userChosenTypes>
+        <autoDetectTypes>
+          <platformType>MCP</platformType>
+        </autoDetectTypes>
+        <projectReimportVersion>1</projectReimportVersion>
       </configuration>
     </facet>
   </component>
@@ -19,7 +23,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="mc-image.mc-image-lib.main" />
     <orderEntry type="library" name="Gradle: org.graalvm.nativeimage:svm:22.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.quiltmc:hashed:1.17.1" level="project" />
     <orderEntry type="library" name="Gradle: net.fabricmc:tiny-mappings-parser:0.3.0+build.17" level="project" />
@@ -68,5 +71,6 @@
     <orderEntry type="library" name="Gradle: org.graalvm.compiler:compiler:22.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.graalvm.sdk:graal-sdk:22.2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.graalvm.truffle:truffle-api:22.2.0" level="project" />
+    <orderEntry type="module" module-name="mc-image.mc-image-lib.main" />
   </component>
 </module>

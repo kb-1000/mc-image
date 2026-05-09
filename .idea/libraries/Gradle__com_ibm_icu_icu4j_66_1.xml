@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: com.ibm.icu:icu4j:66.1">
+  <library name="Gradle: com.ibm.icu:icu4j:66.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.ibm.icu" artifactId="icu4j" version="66.1" baseVersion="66.1" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ibm.icu/icu4j/66.1/72c7519b6d91f7a1f993bd44a99fe95d67211b27/icu4j-66.1.jar!/" />
     </CLASSES>

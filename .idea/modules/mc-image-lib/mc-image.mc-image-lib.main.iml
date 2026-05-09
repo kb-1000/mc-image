@@ -8,6 +8,10 @@
             <entry key="MCP" value="false" />
           </map>
         </userChosenTypes>
+        <autoDetectTypes>
+          <platformType>MCP</platformType>
+        </autoDetectTypes>
+        <projectReimportVersion>1</projectReimportVersion>
       </configuration>
     </facet>
   </component>

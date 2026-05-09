@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: com.mojang:brigadier:1.0.18">
+  <library name="Gradle: com.mojang:brigadier:1.0.18" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.mojang" artifactId="brigadier" version="1.0.18" baseVersion="1.0.18" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mojang/brigadier/1.0.18/c1ef1234282716483c92183f49bef47b1a89bfa9/brigadier-1.0.18.jar!/" />
     </CLASSES>

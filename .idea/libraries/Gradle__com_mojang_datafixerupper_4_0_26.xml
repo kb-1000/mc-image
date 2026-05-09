@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: com.mojang:datafixerupper:4.0.26">
+  <library name="Gradle: com.mojang:datafixerupper:4.0.26" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.mojang" artifactId="datafixerupper" version="4.0.26" baseVersion="4.0.26" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mojang/datafixerupper/4.0.26/ebd6690f33871ccee9b6132c6480668ee2e35020/datafixerupper-4.0.26.jar!/" />
     </CLASSES>

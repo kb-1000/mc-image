@@ -7,7 +7,7 @@
  */
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.7.10"
+    kotlin("jvm") version "2.3.21"
 }
 
 repositories {
@@ -23,13 +23,10 @@ repositories {
 dependencies {
     implementation(project(":mc-image-lib", configuration = "graal"))
     implementation(project(":mc-image-lib", configuration = "minecraftLibraries"))
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8") {
-        exclude(module = "kotlin-stdlib-common")
-    }
     implementation("org.jetbrains:annotations:23.0.0")
     implementation("com.squareup:javapoet:1.13.0")
     implementation("jakarta.xml.bind:jakarta.xml.bind-api:4.0.0")
-    implementation("org.ow2.asm:asm-commons:9.3")
+    implementation("org.ow2.asm:asm-commons:9.9.1")
     runtimeOnly("org.glassfish.jaxb:jaxb-runtime:4.0.0")
     runtimeOnly("org.glassfish.jaxb:jaxb-xjc:4.0.0")
 }

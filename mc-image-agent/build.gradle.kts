@@ -19,7 +19,7 @@ dependencies {
 }
 
 sourceSets {
-    create("optimize") {
+    register("optimize") {
         compileClasspath += sourceSets.main.get().output
         runtimeClasspath += sourceSets.main.get().output
     }
@@ -27,12 +27,12 @@ sourceSets {
 
 
 configurations {
-    getByName("optimizeCompileClasspath") {
-        extendsFrom(compileClasspath.get())
+    named("optimizeCompileClasspath") {
+        extendsFrom(compileClasspath)
     }
 
-    getByName("optimizeRuntimeClasspath") {
-        extendsFrom(runtimeClasspath.get())
+    named("optimizeRuntimeClasspath") {
+        extendsFrom(runtimeClasspath)
     }
 }
 
@@ -46,8 +46,8 @@ tasks.jar {
     }
 }
 
-val optimizeJar: Jar by tasks.creating(Jar::class) {
-    manifest {
+val optimizeJar by tasks.registering(Jar::class) {
+	manifest {
         from("src/optimize/resources/META-INF/MANIFEST.MF")
     }
     archiveClassifier.set("optimize")

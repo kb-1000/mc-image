@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: com.sun.istack:istack-commons-tools:4.1.1">
+  <library name="Gradle: com.sun.istack:istack-commons-tools:4.1.1" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.sun.istack" artifactId="istack-commons-tools" version="4.1.1" baseVersion="4.1.1" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.istack/istack-commons-tools/4.1.1/c54b869d6f419c6a2f4a464bd7931156bf4ab1b9/istack-commons-tools-4.1.1.jar!/" />
     </CLASSES>

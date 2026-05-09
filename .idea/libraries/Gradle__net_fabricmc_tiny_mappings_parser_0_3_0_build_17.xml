@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: net.fabricmc:tiny-mappings-parser:0.3.0+build.17">
+  <library name="Gradle: net.fabricmc:tiny-mappings-parser:0.3.0+build.17" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="net.fabricmc" artifactId="tiny-mappings-parser" version="0.3.0+build.17" baseVersion="0.3.0+build.17" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.fabricmc/tiny-mappings-parser/0.3.0+build.17/2f10540a290e382a7cd35c16ec3900046a4e252/tiny-mappings-parser-0.3.0+build.17.jar!/" />
     </CLASSES>

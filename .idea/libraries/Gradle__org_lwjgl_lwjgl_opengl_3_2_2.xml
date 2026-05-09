@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.lwjgl:lwjgl-opengl:3.2.2">
+  <library name="Gradle: org.lwjgl:lwjgl-opengl:3.2.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.lwjgl" artifactId="lwjgl-opengl" version="3.2.2" baseVersion="3.2.2" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-opengl/3.2.2/6ac5bb88b44c43ea195a570aab059f63da004cd8/lwjgl-opengl-3.2.2.jar!/" />
     </CLASSES>

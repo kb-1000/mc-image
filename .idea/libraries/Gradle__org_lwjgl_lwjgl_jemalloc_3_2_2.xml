@@ -1,5 +1,6 @@
 <component name="libraryTable">
-  <library name="Gradle: org.lwjgl:lwjgl-jemalloc:3.2.2">
+  <library name="Gradle: org.lwjgl:lwjgl-jemalloc:3.2.2" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.lwjgl" artifactId="lwjgl-jemalloc" version="3.2.2" baseVersion="3.2.2" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.lwjgl/lwjgl-jemalloc/3.2.2/ee8e57a79300f78294576d87c4a587f8c99402e2/lwjgl-jemalloc-3.2.2.jar!/" />
     </CLASSES>
