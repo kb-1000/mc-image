@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation(project(":mc-image-lib", configuration = "graal"))
+    implementation(libs.graal)
     implementation(project(":mc-image-lib", configuration = "minecraftLibraries"))
     implementation("org.jetbrains:annotations:23.0.0")
     implementation("com.squareup:javapoet:1.13.0")

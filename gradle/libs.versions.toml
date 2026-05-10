@@ -1,0 +1,5 @@
+[versions]
+graal = "22.2.0"
+
+[libraries]
+graal = { module = "org.graalvm.nativeimage:svm", version.ref = "graal" }

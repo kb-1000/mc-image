@@ -7,33 +7,22 @@
  */
 
 plugins {
-    java
+    `java-library`
 }
 
 repositories {
     mavenCentral()
 }
 
+java {
+    registerFeature("optimize") {
+        usingSourceSet(sourceSets.create("optimize"))
+    }
+}
+
 dependencies {
-    implementation(project(":mc-image-lib", configuration = "graal"))
-}
-
-sourceSets {
-    register("optimize") {
-        compileClasspath += sourceSets.main.get().output
-        runtimeClasspath += sourceSets.main.get().output
-    }
-}
-
-
-configurations {
-    named("optimizeCompileClasspath") {
-        extendsFrom(compileClasspath)
-    }
-
-    named("optimizeRuntimeClasspath") {
-        extendsFrom(runtimeClasspath)
-    }
+    api(libs.graal)
+    "optimizeImplementation"(project(":mc-image-agent"))
 }
 
 tasks.withType<JavaCompile> {
@@ -46,13 +35,13 @@ tasks.jar {
     }
 }
 
-val optimizeJar by tasks.registering(Jar::class) {
-	manifest {
+val optimizeJar by tasks.existing(Jar::class) {
+    manifest {
         from("src/optimize/resources/META-INF/MANIFEST.MF")
     }
-    archiveClassifier.set("optimize")
-    from(sourceSets.main.get().output, sourceSets["optimize"].output)
+    from(sourceSets.main.get().output)
 }
+
 tasks.assemble {
     dependsOn(optimizeJar)
 }

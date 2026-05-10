@@ -130,10 +130,6 @@ val minecraftLibraries by configurations.registering {
 }
 val minecraftNatives by configurations.registering
 val hashedMojmap by configurations.registering
-val graal by configurations.registering {
-    isCanBeConsumed = true
-    isCanBeResolved = true
-}
 val minecraftClient by configurations.registering {
     extendsFrom(minecraftLibraries, hashedMojmap)
 }
@@ -145,7 +141,7 @@ val substgen by configurations.registering
 
 configurations {
     implementation {
-        extendsFrom(minecraftClient, graal)
+        extendsFrom(minecraftClient)
     }
     named("optimizeCompileClasspath") {
         extendsFrom(compileClasspath)
@@ -171,7 +167,7 @@ data class Library(
     }
 }
 
-val libs: List<Library> =
+val libraries: List<Library> =
     gson.fromJson(versionJson.getAsJsonArray("libraries"), object : TypeToken<List<Library>>() {}.type)
 val slf4jPattern = Regex("^org.slf4j:slf4j-api:(.*)$")
 lateinit var slf4jVersion: String
@@ -190,11 +186,11 @@ val versionRulesOsName = when {
     else -> TODO()
 }
 if (!operatingSystem.isLinux) TODO("Only Linux is currently supported!")
-for (lib in libs) {
+for (lib in libraries) {
     slf4jVersion = (slf4jPattern.matchEntire(lib.name) ?: continue).groupValues[1]
 }
 
-val substgenOutput = buildDir.resolve("generated/sources/substgen/java/main")
+val substgenOutput = project.layout.buildDirectory.dir("generated/sources/substgen/java/main")
 
 val substgenTask = tasks.register<JavaExec>("substgen") {
     val bytecodeOutput = rootProject.file("java.base")
@@ -269,7 +265,7 @@ tasks.withType<JavaCompile> {
 dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("org.jetbrains:annotations:23.0.0")
-    for (lib in libs) {
+    for (lib in libraries) {
         if (lib.rules != null) {
             var allow = false
             for (rule in lib.rules) {
@@ -307,7 +303,7 @@ dependencies {
     minecraftServer("com.mojang.minecraft:server:$minecraftVersion")
     hashedMojmap("org.quiltmc:hashed:$minecraftVersion")
     hashedMojmap("net.fabricmc:tiny-mappings-parser:0.3.0+build.17")
-    graal("org.graalvm.nativeimage:svm:22.2.0")
+    implementation(libs.graal)
     substgen(project(":mc-image-substgen"))
 }
 
